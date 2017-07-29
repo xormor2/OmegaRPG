@@ -1096,7 +1096,8 @@ void l_order(void)
             print1("Your wounds are treated by a medic.");
         cleanse(0);
         Player.hp = Player.maxhp;
-        if ( Player.food <= 40 )
+        dataprint();	// This is a bugfix to show the updated HP as MAXHP onscreen
+	if ( Player.food <= 40 )
         {
             Player.food = 40;
             print2("You get a hot meal from the refectory.");
